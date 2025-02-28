@@ -35,7 +35,7 @@ export default function Contacto() {
   };
 
   return (
-    <div className="bg-full" style={{ backgroundImage: "url('/1.jpg')" }}>
+    <div className="bg-full">
       <div className="min-h-screen flex items-center justify-center text-white">
     <section className="max-w-lg mx-auto p-8">
       <h1 className="text-4xl font-bold mb-6 text-center">Contacto</h1>

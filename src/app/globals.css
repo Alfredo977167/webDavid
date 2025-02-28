@@ -14,7 +14,7 @@ html, body {
 body {
   font-family: var(--font-cormorant-garamond), serif;
   font-weight: 400;
-  color: white;
+  background-color: #232323;;
 }
 
 h1, h2, h3 {
