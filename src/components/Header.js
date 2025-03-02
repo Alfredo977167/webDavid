@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="p-4 flex justify-between items-center text-white fixed w-full z-50">
+    <header className="p-4 flex justify-between items-center text-white w-full">
       {/* Logo */}
       <Link href="/">
         <Image src="/logo.jpg" alt="Logo" width={80} height={80} />

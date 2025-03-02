@@ -7,7 +7,7 @@ export default function Home() {
     <div className="bg-full" style={{backgroundImage: "url('/3.jpg')"}}>
       
     <section
-      className="relative h-[90vh] flex flex-col justify-center items-center text-white text-center bg-cover bg-center"
+      className="h-[70vh] flex flex-col justify-center items-center text-white text-center bg-cover bg-center"
     >
       <motion.div
         className="bg-black bg-opacity-40 p-6 sm:p-8 rounded-lg shadow-lg"
@@ -23,7 +23,7 @@ export default function Home() {
         </p>
         <motion.a
           href="/contacto"
-          className="bg-blue-600 px-4 py-2 sm:px-6 sm:py-3 rounded-lg text-white text-base sm:text-lg font-semibold hover:bg-blue-500 transition"
+          className="button px-4 py-2 sm:px-6 sm:py-3 rounded-lg text-white text-base sm:text-lg font-semibold transition"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

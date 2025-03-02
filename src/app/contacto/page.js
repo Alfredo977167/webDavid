@@ -69,7 +69,7 @@ export default function Contacto() {
         ></textarea>
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-500 transition"
+          className="button w-full text-white py-3 rounded transition"
         >
           Enviar
         </button>
