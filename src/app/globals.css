@@ -6,17 +6,21 @@
 @tailwind utilities;
 
 /* Ajustar body y html para evitar scroll innecesario */
-html, body {
+html,
+body {
   height: 100%; /* Mantiene todo en la pantalla */
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
-
-main {
-  flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+html {
+  scroll-behavior: smooth;
 }
+
+/*main {
+  flex: 1; /* Hace que el contenido principal ocupe el espacio restante 
+}*/
 
 header {
   width: 100%;
@@ -33,17 +37,38 @@ footer {
   text-align: center;
   flex-shrink: 0; /* Evita que se encojan */
 }
-
+/*
 body {
   font-family: var(--font-cormorant-garamond), serif;
   font-weight: 400;
-  background-color: #232323;;
+  background-color: #232323;
 }
 
-h1, h2, h3 {
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/fondo.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  will-change: transform;
+  height: 100%;
+}*/
+
+/*
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* Ajusta la imagen para que no se recorte en pantallas pequeñas 
+    background-position: top center; /* Asegura que la parte importante de la imagen se vea 
+  }
+}*/
+
+h1,
+h2,
+h3 {
   font-family: var(--font-cormorant-garamond), serif;
   font-weight: 700;
-  color: #C9A368; /* Color dorado para destacar */
+  color: #c9a368; /* Color dorado para destacar */
 }
 
 p {
@@ -52,7 +77,7 @@ p {
   line-height: 1.6;
 }
 
-.logoSilueta{
+.logoSilueta {
   bottom: 100px; /* Ajusta el valor según la necesidad */
 }
 
@@ -70,55 +95,54 @@ p {
   color: #b08b50;
 }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .button {
-    background-color: #C9A368;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #b08b50;
-  }
-  
-  .bg-custom {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #c9a368;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #b08b50;
+}
+
+.bg-custom {
   /*  background-image: url('/2.jpg'); /* O '/img/wood-bg.jpg' */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  .bg-full {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    width: 100%;
-  }
-  .text-shadow {
-    color: white;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Sombra negra */
-  }
-  .page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Hace que el contenido ocupe al menos el 100% del viewport */
-  }
-  
-  .content {
-    flex: 1; /* Empuja el footer hacia abajo */
-  }
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
+.bg-full {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+.text-shadow {
+  color: white;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Sombra negra */
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hace que el contenido ocupe al menos el 100% del viewport */
+}
 
-  /* Estilo base del menú */
+.content {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
+/* Estilo base del menú */
 .menu {
   position: fixed;
   top: 0;
@@ -133,7 +157,9 @@ p {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  transition: left 0.4s ease-in-out, opacity 0.3s;
+  transition:
+    left 0.4s ease-in-out,
+    opacity 0.3s;
   opacity: 0;
 }
 

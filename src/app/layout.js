@@ -1,8 +1,7 @@
-import "./globals.css"; // Para los estilos globales
+import './globals.css'; // Para los estilos globales
 import { Cormorant_Garamond } from 'next/font/google';
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const cormorantGaramond = Cormorant_Garamond({
   weight: ['300', '400', '500', '600', '700'], // Puedes elegir los pesos que necesites
@@ -11,8 +10,8 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata = {
-  title: "Bufete Legal",
-  description: "Asesoría legal profesional y confiable.",
+  title: 'Bufete Legal',
+  description: 'Asesoría legal profesional y confiable.',
 };
 
 export default function RootLayout({ children }) {

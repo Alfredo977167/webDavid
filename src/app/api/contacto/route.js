@@ -1,19 +1,19 @@
-import nodemailer from "nodemailer";
-import { NextResponse } from "next/server";
+import nodemailer from 'nodemailer';
+import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
     const body = await request.json();
     const { nombre, email, mensaje } = body;
-    
+
     // Looking to send emails in production? Check out our Email API/SMTP product!
     const transporter = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
-        auth: {
-        user: "7bb7ba2dfc8445",
-        pass: "********18f0"
-        }
+      host: 'sandbox.smtp.mailtrap.io',
+      port: 2525,
+      auth: {
+        user: '7bb7ba2dfc8445',
+        pass: '********18f0',
+      },
     });
 
     // Define el correo que será enviado
@@ -29,17 +29,11 @@ export async function POST(request) {
 
     // Envía el correo
     const info = await transporter.sendMail(mailOptions);
-    console.log("Mensaje enviado:", info.messageId);
+    console.log('Mensaje enviado:', info.messageId);
 
-    return NextResponse.json(
-      { message: "Mensaje enviado correctamente", info },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: 'Mensaje enviado correctamente', info }, { status: 200 });
   } catch (error) {
-    console.error("Error al enviar el mensaje:", error);
-    return NextResponse.json(
-      { message: "Error al enviar el mensaje" },
-      { status: 500 }
-    );
+    console.error('Error al enviar el mensaje:', error);
+    return NextResponse.json({ message: 'Error al enviar el mensaje' }, { status: 500 });
   }
 }
