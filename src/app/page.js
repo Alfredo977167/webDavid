@@ -76,17 +76,18 @@ export default function Home() {
           <motion.img
             src="/logo-abogados.png"
             alt="Crespo de la Rosa Abogados"
-            className="w-full max-w-[400px] mx-auto mb-4 drop-shadow-[4px_4px_6px_rgba(0,0,0,0.7)]"
+            className="w-full max-w-[600px] mx-auto mb-4 drop-shadow-[4px_4px_6px_rgba(0,0,0,0.7)]"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1 }}
           />
-          <p className="text-sm sm:text-base md:text-lg text-white mb-4 leading-relaxed">
+          <p className={`${cinzel.className} text-center`}>
             Más de 35 años de experiencia en los tribunales nos avalan. En{' '}
-            <strong>RUICRES Abogados</strong>, luchamos por tus derechos y te acompañamos paso a
-            paso, ofreciéndote confianza, seguridad y compromiso en los momentos más importantes de
-            tu vida.
+            <strong>CRESPO DE LA ROSA ABOGADOS</strong>, luchamos por tus derechos y te acompañamos
+            paso a paso, ofreciéndote confianza, seguridad y compromiso en los momentos más
+            importantes de tu vida.
           </p>
+          <br></br>
           <a
             href="#contacto"
             className="bg-white text-black px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-gray-200 transition"

@@ -71,10 +71,21 @@ h3 {
   color: #c9a368; /* Color dorado para destacar */
 }
 
-p {
+/*p {
   font-family: var(--font-cormorant-garamond), serif;
   font-weight: 300;
   line-height: 1.6;
+}*/
+p {
+  color: #afaaa3;
+  opacity: 100%;
+}
+
+.text-shadow-metal {
+  text-shadow:
+    0 1px 1px #aaa,
+    1px 1px 2px rgba(0, 0, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .logoSilueta {
