@@ -18,16 +18,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/*main {
-  flex: 1; /* Hace que el contenido principal ocupe el espacio restante 
-}*/
-
 header {
   width: 100%;
   height: 80px; /* Ajusta según la altura real */
-  background: #232323;
+  background: #0b3d2e;
   flex-shrink: 0; /* Evita que se encojan */
   position: relative; /* Permite que el contenido fluya correctamente */
+  color: #afaaa3;
 }
 
 footer {
@@ -37,31 +34,6 @@ footer {
   text-align: center;
   flex-shrink: 0; /* Evita que se encojan */
 }
-/*
-body {
-  font-family: var(--font-cormorant-garamond), serif;
-  font-weight: 400;
-  background-color: #232323;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url('/fondo.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  will-change: transform;
-  height: 100%;
-}*/
-
-/*
-@media (max-width: 768px) {
-  body {
-    background-size: cover; /* Ajusta la imagen para que no se recorte en pantallas pequeñas 
-    background-position: top center; /* Asegura que la parte importante de la imagen se vea 
-  }
-}*/
 
 h1,
 h2,
@@ -71,14 +43,12 @@ h3 {
   color: #c9a368; /* Color dorado para destacar */
 }
 
-/*p {
-  font-family: var(--font-cormorant-garamond), serif;
-  font-weight: 300;
-  line-height: 1.6;
-}*/
 p {
   color: #afaaa3;
-  opacity: 100%;
+}
+
+nav a {
+  color: #afaaa3;
 }
 
 .text-shadow-metal {
@@ -90,20 +60,6 @@ p {
 
 .logoSilueta {
   bottom: 100px; /* Ajusta el valor según la necesidad */
-}
-
-/* Estilo de los enlaces del menú */
-.nav-link {
-  font-family: var(--font-cormorant-garamond), serif;
-  color: #fddd98;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 10px 15px;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #b08b50;
 }
 
 .container {
@@ -121,12 +77,15 @@ p {
   transition: 0.3s;
 }
 
+.custom-button {
+  background-color: #0b3d2e;
+}
+
 .button:hover {
   background-color: #b08b50;
 }
 
 .bg-custom {
-  /*  background-image: url('/2.jpg'); /* O '/img/wood-bg.jpg' */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
