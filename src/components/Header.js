@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react'; // Importamos iconos de Lucide-React
 import { Cinzel } from 'next/font/google';
+import { useEffect } from 'react';
 
 const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -13,6 +14,18 @@ export default function Header() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Limpieza por si el componente se desmonta
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   return (
     <header
@@ -40,16 +53,16 @@ export default function Header() {
       </nav>
 
       {/* Botón de menú hamburguesa para móviles */}
-      <button onClick={toggleMenu} className="md:hidden p-2 z-50">
+      <button onClick={toggleMenu} className="md:hidden p-2 z-[100]">
         {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
       {/* Menú colapsado para móviles con animación */}
       {/* Overlay + menú colapsado para móviles */}
       {isOpen && (
-        <div className="fixed inset-0 z-[9] bg-black bg-opacity-50 backdrop-blur-sm md:hidden">
+        <div className="fixed inset-0 z-[90] bg-black bg-opacity-50 backdrop-blur-sm md:hidden">
           <nav
-            className={`absolute z-[10] top-0 left-0 w-full h-screen bg-[#0B3D2E] bg-opacity-95 flex flex-col items-center pt-20 overflow-y-auto justify-start space-y-6 transition-transform transform ${
+            className={`absolute z-[99] top-0 left-0 w-full h-screen bg-[#0B3D2E] bg-opacity-95 flex flex-col items-center pt-20 overflow-y-auto justify-start space-y-6 transition-transform transform ${
               isOpen ? 'translate-x-0' : '-translate-x-full'
             }`}
           >
@@ -57,7 +70,7 @@ export default function Header() {
               <Image
                 src="/logoSilueta2.png"
                 alt="Logo"
-                className="mt-[-90px] logoSilueta"
+                className="mt-[-50px] logoSilueta"
                 onClick={toggleMenu}
                 width={100}
                 height={100}

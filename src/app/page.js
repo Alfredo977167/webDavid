@@ -74,7 +74,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >*/}
         <motion.div
-          className="relative z-[1] bg-black bg-opacity-70 px-6 py-4 sm:px-8 sm:py-6 rounded-xl shadow-2xl text-center max-w-3xl"
+          className="relative bg-black bg-opacity-70 px-6 py-4 sm:px-8 sm:py-6 rounded-xl shadow-2xl text-center max-w-3xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* Sección de servicios */}
-      <section id="servicios" className="relative z-10 py-16 px-4 text-white">
+      <section id="servicios" className="relative z-5 py-16 px-4 text-white">
         {<Servicios />}
       </section>
 
@@ -121,7 +121,7 @@ export default function Home() {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-10 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 hover:opacity-80"
+          className="fixed bottom-10 right-10 bg-blue-500 text-white p-3 z-[50] rounded-full shadow-lg transition-opacity duration-300 hover:opacity-80"
           aria-label="Ir al inicio"
         >
           ↑
