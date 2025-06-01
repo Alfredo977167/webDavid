@@ -13,7 +13,12 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  background-image: url('/unnamed.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* para efecto parallax */
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -35,12 +40,11 @@ footer {
   flex-shrink: 0; /* Evita que se encojan */
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-cormorant-garamond), serif;
-  font-weight: 700;
-  color: #c9a368; /* Color dorado para destacar */
+.titulo-servicio {
+  font-size: 1.75rem; /* Puedes ajustar según tamaño */
+  text-shadow: 1px 1px 2px rgba(255, 255, 240, 0.7);
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
 p {

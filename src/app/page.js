@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <main>
       {/* Contenedor de fondo */}
-      <div
+      {/*<div
         id="fondo"
         className="fixed top-0 left-0 w-full h-full bg-cover bg-center"
         style={{
@@ -61,11 +61,11 @@ export default function Home() {
           zIndex: -1, // Aseguramos que el fondo esté detrás del contenido
           height: '206%', // Aseguramos que ocupe el 100% de la altura de la ventana
         }}
-      ></div>
+      ></div>*/}
       {/* Sección de inicio */}
       <section
         id="inicio"
-        className="relative z-[1] h-[450px] md:h-[500px] bg-center bg-cover flex items-center justify-center text-white"
+        className="relative z-[1] h-[600px] md:h-[500px] bg-center bg-cover flex items-center justify-center text-white"
       >
         {/*<motion.div
           className="bg-black bg-opacity-40 px-6 py-4 sm:px-8 sm:py-6 rounded-xl shadow-2xl text-center max-w-3xl"
@@ -74,7 +74,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >*/}
         <motion.div
-          className="relative z-[1] bg-black bg-opacity-40 px-6 py-4 sm:px-8 sm:py-6 rounded-xl shadow-2xl text-center max-w-3xl"
+          className="relative z-[1] bg-black bg-opacity-70 px-6 py-4 sm:px-8 sm:py-6 rounded-xl shadow-2xl text-center max-w-3xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -92,6 +92,13 @@ export default function Home() {
             <strong>CRESPO DE LA ROSA ABOGADOS</strong>, luchamos por tus derechos y te acompañamos
             paso a paso, ofreciéndote confianza, seguridad y compromiso en los momentos más
             importantes de tu vida.
+            <br></br>
+            Teniendo como objetivo principal luchar por el derecho y la libertad de cada persona, te
+            acompañaremos de la mano en cada momento del procedimiento.
+            <br></br>
+            Contamos con un amplio equipo de especialistas en las ramas de Derecho Civil y de
+            Familia, Derecho Laboral, Derecho Penal, Derecho de Extranjería y Derecho Tributario y
+            Fiscal.
           </p>
           <br></br>
           <a
@@ -103,49 +110,10 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Sección sobre nosotros */}
-      <section id="sobre-nosotros">
-        <div className="bg-full">
-          <div className="min-h-screen flex items-center justify-center text-white">
-            <section className="max-w-5xl mx-auto p-8">
-              <h1 className="text-shadow text-4xl font-bold text-center mb-8">Sobre Nosotros</h1>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Tarjeta para Juan Pérez */}
-                <div className="flex flex-col items-center">
-                  <Image
-                    src="/juan.jpg"
-                    alt="Juan Pérez"
-                    width={48}
-                    height={48}
-                    className="rounded-full object-cover mb-4"
-                  />
-                  <h2 className="text-shadow text-2xl font-semibold">Juan Pérez</h2>
-                  <p className="text-shadow text-600 text-center font-semibold">
-                    Abogado penal con amplia experiencia en casos complejos.
-                  </p>
-                </div>
-                {/* Tarjeta para María Gómez */}
-                <div className="flex flex-col items-center">
-                  <Image
-                    src="/maria.jpg"
-                    alt="María Gómez"
-                    width={48}
-                    height={48}
-                    className="rounded-full object-cover mb-4"
-                  />
-                  <h2 className="text-shadow text-2xl font-semibold">María Gómez</h2>
-                  <p className="text-shadow text-600 text-center font-semibold">
-                    Abogada especialista en derecho civil y mercantil, con años de experiencia.
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-
       {/* Sección de servicios */}
-      <section id="servicios">{<Servicios />}</section>
+      <section id="servicios" className="relative z-10 py-16 px-4 text-white">
+        {<Servicios />}
+      </section>
 
       {/* Sección de contacto */}
       <section id="contacto">{<Contacto />}</section>
