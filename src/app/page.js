@@ -65,7 +65,7 @@ export default function Home() {
       {/* Sección de inicio */}
       <section
         id="inicio"
-        className="relative z-[1] h-[600px] md:h-[500px] bg-center bg-cover flex items-center justify-center text-white"
+        className="relative z-[1] h-[800px] md:h-[500px] bg-center bg-cover flex items-center justify-center text-white"
       >
         {/*<motion.div
           className="bg-black bg-opacity-40 px-6 py-4 sm:px-8 sm:py-6 rounded-xl shadow-2xl text-center max-w-3xl"
