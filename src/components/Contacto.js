@@ -1,6 +1,7 @@
 'use client';
-
+import { Cinzel } from 'next/font/google';
 import { useState } from 'react';
+const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] });
 
 export default function Contacto() {
   const [form, setForm] = useState({
@@ -38,7 +39,9 @@ export default function Contacto() {
     <div className="bg-full">
       <div className="min-h-screen flex items-center justify-center text-white">
         <section className="max-w-lg mx-auto p-8">
-          <h1 className="text-4xl font-bold mb-6 text-center">Contacto</h1>
+          <h1 className={`text-[#0b3d2e] text-4xl mb-6 text-center ${cinzel.className}`}>
+            Contacto
+          </h1>
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
